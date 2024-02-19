@@ -31,10 +31,35 @@
         font-size: $titleSize;
         color: var(--black);
         text-transform:capitalize;
+        
     }
 
+    @mixin titleText($graphSize){
+        font-size: $graphSize;
+        color: var(--light-color);
+        text-transform:capitalize;
+        line-height: 1.5;
+    }
+    @mixin iconsBox(){
+        height: 5rem;
+        width: 5rem;
+        line-height: 5rem;
+        font-size: 2rem;
+        background:var(--light-bg);
+        color:var(--black);
+        cursor:pointer;
+        text-align: center;
+
+        &:hover{
+            background-color:var(--blank);
+            color:var(--white);
+        }
+
+    }
+
+
     html{
-        font-size: 62.5%;
+        font-size: 70.5%;
         overflow-x: hidden;
         scroll-behavior:smooth;
         scroll-padding-top:7rem;
@@ -56,13 +81,38 @@
             align-items: center;
             justify-content: space-between;
             z-index: 1000;
+.logo{
+  @include titleText(2.5rem);
+                span{
+                    color:var(--orange);
+                }
+            }
+
+        
+.navbar a{
+    @include titleText(2rem);
+    margin: 0 1rem;
+
+    &:hover{
+        color:var(--orange);
+
+    }
+} 
+
+.icons div{
+    @include iconsBox();
+    margin-left: .3rem;
+}
+#menu-btn{
+    display:none ;
+}
+
 
         }
-        
-    
-    
+       
 
-
-.img{
-   width: 70px;
+@media(max-width:1200px){
+    .header{
+        padding:1.5rem
+    }
 }
