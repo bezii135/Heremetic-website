@@ -34,7 +34,7 @@
         
     }
 
-    @mixin titleText($graphSize){
+    @mixin graphText($graphSize){
         font-size: $graphSize;
         color: var(--light-color);
         text-transform:capitalize;
@@ -68,10 +68,22 @@
         width: 1rem;
        }
         &::-webkit-scrollbar-track{
+            background: transparent ;
+        }
+        &::-webkit-scrollbar-thumb{
             background:var(--orange) ;
         }
      
         }
+
+
+        @keyframes fadeIn{
+          0%{
+            top:50%; 
+            opacity: 0; 
+        }
+    }
+
         .header{
             position: sticky;
             top:0; left: 0; right: 0;
@@ -82,7 +94,9 @@
             justify-content: space-between;
             z-index: 1000;
 .logo{
-  @include titleText(2.5rem);
+  @include titleText(2.5rem); 
+  font-size: 20px;
+  color:#111;
                 span{
                     color:var(--orange);
                 }
@@ -91,28 +105,170 @@
         
 .navbar a{
     @include titleText(2rem);
-    margin: 0 1rem;
+    color:#111;
+  margin: 0 1rem;
 
     &:hover{
         color:var(--orange);
 
     }
+    font-size: 16px
 } 
 
 .icons div{
+    width: 12px;
     @include iconsBox();
     margin-left: .3rem;
+
+    
+    &:hover{
+        color:var(--orange);
+
+    }
 }
 #menu-btn{
     display:none ;
+}
+.search-form{
+    position:absolute;
+    top: 120%; left:50%;
+    transform:translateX(-50%);
+    width: 70rem;
+    background: var(--white);
+    box-shadow:var(--box-shadow);
+    padding: 1rem;
+    display: none;
+    align-items: center;
+    gap: 1rem;
+    animation: fadeIn 1s linear;
+
+    &.active{
+        display: flex;
+    }
+    input{
+        width: 100%;
+        padding: 1.2rem 1.4rem;
+        background: var(--black);
+        font-size: 1.6rem;
+        color:var(--light-color)
+    }
+    label{
+        font-size: 2.1rem;
+        color: var(--black);
+        cursor: pointer;
+        margin: 0.1rem;
+
+        &:hover{
+            color: var(--orange);
+        }
+    }
 }
 
 
         }
        
 
-@media(max-width:1200px){
-    .header{
-        padding:1.5rem
+
+
+.contact-info{
+    position: fixed;
+    top:0; right: 0;
+    width: 30rem;
+    background: var(--white);
+    height: 100%;
+    text-align: center;
+    z-index: 1100;
+    padding: 0 2rem;
+    padding-top: 5rem ;
+    display: none;
+
+    &.active{
+        box-shadow: 0 0 0 100vw rgba(0,0,0,.7);
+        display: block;
+
     }
-}
+
+    #close-contact-info{
+        position:absolute;
+        top: 1rem; right: 1.5rem;
+        cursor: 3rem;
+        font-size: 4rem;
+        color:var(--black);
+        &:hover{
+            transform: rotate(90deg);
+        }
+     
+
+    }
+
+    .info{
+        padding:2rem 0;
+        i{
+            @include iconsBox();
+            margin-bottom: .5rem;
+        }
+        h3{
+            @include titleText(2rem);
+            padding:1rem 0
+        }
+        p{
+            @include graphText(1.5rem);
+        }
+    }
+        .share{
+            padding-top: 1rem;
+            border-top: var(--border);
+            margin: top 1rem; ;
+            a{
+                @include iconsBox();
+                margin: 0.3rem;
+            }
+        }
+    }
+    @media(max-width:1200px){
+        .header{
+            padding:1.5rem
+        }
+    }
+    
+    @media(max-width:991px){
+        html{
+            font-size: 55%;
+        }
+        .header{
+            #menu-btn{
+                display:inline-block ;
+            }
+            .navbar{
+                position: absolute;
+                top:99%; left:0; right:0;
+                background: var(--white);
+                border-top:  var(--border);
+                border-bottom: var(--border);
+                clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+                
+                &.active{
+                    clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
+                }
+    
+                a{
+                    display: block;
+                    margin:2rem ;
+                }
+            }
+        }
+    }
+    @media(max-width:768px){
+        .header{
+            .search-form{
+                width: 90%;
+            }
+        }
+    @media(max-width:450px){
+        html{
+            font-size: 50%;
+        }
+    }
+
+
+    }
