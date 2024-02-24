@@ -166,7 +166,17 @@
 
 
         }
-       
+
+        .btn{
+            background-color: white;
+            color:black;
+
+            &:hover{
+                border-radius: 0%;
+                color: #eee;
+                background-color: black;
+            }
+        }
 
 
 
