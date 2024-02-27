@@ -6,6 +6,9 @@
         <meta name="viewport" content="width=device-width, intial-scale=1.0">
         <title> Heremetics</title>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/>
+
 
         <link rel="stylesheet" href="Heremetic.scss">
     </head>
@@ -68,12 +71,12 @@
 
 
         </div>
-<section class="home" id="home">
-    <div class ="home-slider">
-        <div class="w">
-            <section class="slide" style="background:url(background.jpg)  no repeat;">
+<section class=" home" id="home">
+    <div class ="swiper home-slider">
+        <div class="swiper-wrapper">
+            <section class=" swiper-slide slide" style="background:url(background.jpg)  no repeat;">
                 <style>
-                    .slide {
+                    section {
                       background-image: url('images/background.jpg') ;
                       background-repeat: no-repeat;
                     }
@@ -84,7 +87,13 @@
                 <a href="#about" class="btn">get started</a>
             </div>
             </section>
-            <section class="slide" style="background:url(background.jpg)  no repeat;">
+            <section class=" swiper-slide slide" style="background:url(background.jpg)  no repeat;">
+                <style>
+                    section {
+                      background-image: url('images/background.jpg') ;
+                      background-repeat: no-repeat;
+                    }
+                    </style>
                 <div class="content">
                     <h3>Quality is our main priority </h3>
                     <p>plumbing service, flooring store, construction and finishing materials, waterproofing materials, Decorative coatings and paints</p>
@@ -92,7 +101,13 @@
                 </div>
                 </section>
 
-                <section class="slide" style="background:url(background.jpg)  no repeat;">
+                <section class=" swiper-slide slide" style="background:url(background.jpg)  no repeat;">
+                    <style>
+                        section {
+                          background-image: url('images/background.jpg') ;
+                          background-repeat: no-repeat;
+                        }
+                        </style>
                     <div class="content">
                         <h3>we provide the best service in the country</h3>
                         <p> Hermetic Engineering, Waterproofing and Flooring</p>
@@ -101,9 +116,46 @@
                     </section>
             
 
-        </div>
+                </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+    </div>
+    
+</section>
+
+
+<section class="about" id="about">
+    <h1 class="heading"> about us</h1>
+    <div class="row">
+
+       <div class="image" >
+        <img src="images/aboutus.jpg"  width="300" height="300" alt="">
+       </div>
+
+       <div class="content">
+        <h3>Welcome to Heremetic, Your Trusted Waterproofing Experts </h3>
+        <p>At Heremetic, we specialize in providing top-tier waterproofing solutions that stand the test of time.
+             With over 8 years of experience in the industry, 
+             our  business has dedicated itself to protecting homes and businesses from the damaging effects of water intrusion. Our journey began in 2017, 
+            driven by a passion for excellence and a deep understanding of the unique challenges posed by water leakage and damage.</p>
+            <a href="#services" class="btn"> read more</a>
+       </div>
     </div>
 </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
 
 
