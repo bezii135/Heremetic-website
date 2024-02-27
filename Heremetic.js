@@ -16,7 +16,7 @@ document.querySelector('#search-btn').onclick = () =>{
 document.querySelector('#info-btn').onclick = () =>{
     contactInfo.classList.add('active');
     navbar.classList.remove('active');
-    searchForm.classList.remove('active');
+   
 };
 
 document.querySelector('#close-contact-info').onclick = () =>{
@@ -34,7 +34,7 @@ window.onscroll =() =>{
 var swiper = new Swiper(".home-slider", {
     loop:true,
     grabCursor:true,
-    
+
     navigation: {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
