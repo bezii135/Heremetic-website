@@ -7,12 +7,6 @@ document.querySelector('#menu-btn').onclick = () =>{
     searchForm.classList.remove('active');
 };
 
-document.querySelector('#search-btn').onclick = () =>{
-    searchForm.classList.toggle('active');
-    navbar.classList.remove('active');
-   
-};
-
 document.querySelector('#info-btn').onclick = () =>{
     contactInfo.classList.add('active');
     navbar.classList.remove('active');
