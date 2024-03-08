@@ -20,10 +20,13 @@
         transition: all .2s linear;
     }
 
-    @mixin grid($val){
-        display: grid;
-        grid-template-clomuns: repeat(auto-fit,minmax($val,1fr));
-        gap:2rem;
+    @media screen {
+        grid($val){
+            display: grid;
+            grid-template-clomuns: repeat(auto-fit,minmax($val,1fr));
+            gap:2rem;
+        }
+        
     }
 
     

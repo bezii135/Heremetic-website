@@ -227,8 +227,11 @@
         cursor: 3rem;
         font-size: 4rem;
         color:var(--black);
+
         &:hover{
+            color: #f58223;
             transform: rotate(90deg);
+            transition: all 0.5s ease;
         }
      
 
@@ -239,6 +242,7 @@
         i{
             @include iconsBox();
             margin-bottom: .5rem;
+            transition: all 2s ease;
         }
         h3{
             @include titleText(2rem);
@@ -255,6 +259,7 @@
             a{
                 @include iconsBox();
                 margin: 0.3rem;
+                
             }
         }
     }
@@ -300,6 +305,10 @@
                 padding:1rem 0;
                 font-size: 130%;
 
+            }
+
+            img{
+                background: no-repeat;
             }
         }
     }
