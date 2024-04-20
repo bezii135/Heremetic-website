@@ -1,0 +1,36 @@
+
+  
+.team-section{
+    width:100%;
+
+}
+.team-section .container{
+    width:80%;
+    margin:auto;
+
+}
+.team-section .container .row{
+    width:60%;
+    margin:auto;
+
+}
+
+.team-section .container .team-card{
+    width:100%;
+    display : grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap:40px;
+    margin-top: 50px;
+
+}
+
+.team-section .container .team-card .card{
+    width: 100%;
+    background-color: #fafa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+    cursor: pointer;
+}
